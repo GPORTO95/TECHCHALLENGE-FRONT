@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="filter">
+        <input type="text">
+        <button>Pesquisar</button>
+    </div>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Ddd</th>
+        </tr>
+        @for (contato of contatos$ | async; track $index) {
+            <tr>
+                <td>{{ contato.nome }}</td>
+                <td>{{ contato.email }}</td>
+                <td>{{ contato.telefone }}</td>
+                <td>{{ contato.ddd }}</td>
+            </tr>
+        }
+    </table>
+
+</div>
