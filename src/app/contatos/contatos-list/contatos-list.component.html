@@ -1,8 +1,29 @@
 <div class="container">
 
+    <a>+ Adicionar</a>
+
     <div class="filter">
-        <input type="text">
-        <button>Pesquisar</button>
+        <div class="collapse">
+            <p>Filtros</p>
+            <span>+</span>
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmitFiltros()">
+            <div class="row-1">
+                <input type="text" placeholder="Nome" formControlName="nome">
+                <input type="text" placeholder="Telefone" formControlName="telefone">
+            </div>
+
+            <div class="row-2">
+                <input type="text" placeholder="Email" formControlName="email">
+                <input type="text" placeholder="Ddd" formControlName="ddd">
+            </div>
+
+            <div class="search">
+                <button type="submit">Pesquisar</button>
+                <button type="button" (click)="limparFiltros()">limpar</button>
+            </div>
+        </form>
     </div>
 
     <table>
@@ -13,12 +34,12 @@
             <th>Ddd</th>
         </tr>
         @for (contato of contatos$ | async; track $index) {
-            <tr>
-                <td>{{ contato.nome }}</td>
-                <td>{{ contato.email }}</td>
-                <td>{{ contato.telefone }}</td>
-                <td>{{ contato.ddd }}</td>
-            </tr>
+        <tr>
+            <td>{{ contato.nome }}</td>
+            <td>{{ contato.email }}</td>
+            <td>{{ contato.telefone }}</td>
+            <td>{{ contato.ddd }}</td>
+        </tr>
         }
     </table>
 
