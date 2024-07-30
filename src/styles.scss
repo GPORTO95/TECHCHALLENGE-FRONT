@@ -1,12 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham/gotham-light.woff2') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham/gotham-book.woff2') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham/gotham-bold.woff2') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham/gotham-black.woff2') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    font-family: 'Gotham', sans-serif;
+
+    background-color: #e8ddcb;
 }
 
 :root {
     font-size: 62.5%;
+}
+
+a {
+    background-color: transparent;
+    color: #036564;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+button {
+    background: #036564;
+    padding: 10px 16px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-secondary {
+    color: #475569;
+    background: #f1f5f9;
+    border: 1px solid #f1f5f9;
+}
+
+input {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 10px 6px;
+
+    &:focus {
+        outline: none;
+        border-color: #036564;
+    }
 }
