@@ -1,48 +1,70 @@
 .container {
-    padding: 10rem;
+  background-color: white;
+  margin: 10rem 5rem;
+  padding: 3rem;
+  border-radius: 5px;
 
-    .filter {
-        width: 100%;
-        margin: 1rem 0;
-        border: 1px solid black;
-        padding: 10px;
+  .filter {
+    width: 100%;
+    margin: 2rem 0;
+    border: 1px solid transparent;
+    padding: 15px;
+    border-radius: 4px;
 
-        .collapse {
-          display: flex;
-          justify-content: space-between;
-        }
+    .collapse {
+      display: flex;
+      justify-content: space-between;
 
-        input {
-          width: 100%;
-        }
-
-        .row-1, .row-2 {
-          display: flex;
-          gap: 20px;
-          margin: 10px 0;
-        }
-
-        .search {
-          display: flex;
-          gap: 10px;
-          width: 100%;
-          justify-content: end;
-        }
+      font-size: 15px;
+      font-weight: 500;
     }
 
-    table {
-        border-collapse: collapse;
+    input {
+      width: 100%;
+    }
+
+    .row-1,
+    .row-2 {
+      display: flex;
+      gap: 20px;
+      margin: 10px 0;
+
+      div {
+        display: block;
         width: 100%;
+
+        label {
+          font-size: 12px;
+          margin-bottom: 5px;
+          display: block;
+        }
       }
-      
-      td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-        font-size: 1.5rem;
-      }
-      
-      tr th {
-        background-color: #dddddd;
-      }
+    }
+
+    .search {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      justify-content: end;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #036564;
+    text-align: left;
+    padding: 8px;
+    font-size: 1.5rem;
+  }
+
+  tr th {
+    background-color: #036564;
+    color: #ffffff;
+    font-weight: 500;
+  }
 }

@@ -4,24 +4,36 @@
 
     <div class="filter">
         <div class="collapse">
-            <p>Filtros</p>
+            <p>FILTROS</p>
             <span>+</span>
         </div>
 
         <form [formGroup]="form" (ngSubmit)="onSubmitFiltros()">
             <div class="row-1">
-                <input type="text" placeholder="Nome" formControlName="nome">
-                <input type="text" placeholder="Telefone" formControlName="telefone">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Digite o nome" formControlName="nome">
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="text" placeholder="Digite o telefone" formControlName="telefone">
+                </div>
             </div>
 
             <div class="row-2">
-                <input type="text" placeholder="Email" formControlName="email">
-                <input type="text" placeholder="Ddd" formControlName="ddd">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Digite o email" formControlName="email">
+                </div>
+                <div>
+                    <label for="ddd">Ddd</label>
+                    <input type="text" placeholder="Digite o ddd" formControlName="ddd">
+                </div>
             </div>
 
             <div class="search">
+                <button type="button" (click)="limparFiltros()" class="btn-secondary">Limpar</button>
                 <button type="submit">Pesquisar</button>
-                <button type="button" (click)="limparFiltros()">limpar</button>
             </div>
         </form>
     </div>
@@ -32,6 +44,7 @@
             <th>Email</th>
             <th>Telefone</th>
             <th>Ddd</th>
+            <th></th>
         </tr>
         @for (contato of contatos$ | async; track $index) {
         <tr>
@@ -39,6 +52,7 @@
             <td>{{ contato.email }}</td>
             <td>{{ contato.telefone }}</td>
             <td>{{ contato.ddd }}</td>
+            <td><a>Editar</a> <a>Excluir</a></td>
         </tr>
         }
     </table>
