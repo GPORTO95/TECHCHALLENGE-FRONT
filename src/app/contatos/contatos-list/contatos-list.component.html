@@ -3,39 +3,46 @@
     <a>+ Adicionar</a>
 
     <div class="filter">
-        <div class="collapse">
+        <div class="collapse" (click)="isOpen = !isOpen">
             <p>FILTROS</p>
-            <span>+</span>
+            @if (isOpen){
+                <span>-</span>
+            } @else {
+                <span>+</span>
+            }
+            
         </div>
 
-        <form [formGroup]="form" (ngSubmit)="onSubmitFiltros()">
-            <div class="row-1">
-                <div>
-                    <label for="nome">Nome</label>
-                    <input type="text" placeholder="Digite o nome" formControlName="nome">
+        @if (isOpen) {
+            <form [formGroup]="form" (ngSubmit)="onSubmitFiltros()">
+                <div class="row-1">
+                    <div>
+                        <label for="nome">Nome</label>
+                        <input type="text" placeholder="Digite o nome" formControlName="nome">
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone</label>
+                        <input type="text" placeholder="Digite o telefone" formControlName="telefone">
+                    </div>
                 </div>
-                <div>
-                    <label for="telefone">Telefone</label>
-                    <input type="text" placeholder="Digite o telefone" formControlName="telefone">
-                </div>
-            </div>
 
-            <div class="row-2">
-                <div>
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Digite o email" formControlName="email">
+                <div class="row-2">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="Digite o email" formControlName="email">
+                    </div>
+                    <div>
+                        <label for="ddd">Ddd</label>
+                        <input type="text" placeholder="Digite o ddd" formControlName="ddd">
+                    </div>
                 </div>
-                <div>
-                    <label for="ddd">Ddd</label>
-                    <input type="text" placeholder="Digite o ddd" formControlName="ddd">
-                </div>
-            </div>
 
-            <div class="search">
-                <button type="button" (click)="limparFiltros()" class="btn-secondary">Limpar</button>
-                <button type="submit">Pesquisar</button>
-            </div>
-        </form>
+                <div class="search">
+                    <button type="button" (click)="limparFiltros()" class="btn-secondary">Limpar</button>
+                    <button type="submit">Pesquisar</button>
+                </div>
+            </form>
+        }
     </div>
 
     <table>

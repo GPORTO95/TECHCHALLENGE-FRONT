@@ -16,6 +16,7 @@ export class ContatosListComponent {
   private contatosService = inject(ContatosService);
 
   contatos$ = new Observable<ContatoList[]>();
+  isOpen: boolean = false;
 
   form = new FormGroup({
     nome: new FormControl(''),
