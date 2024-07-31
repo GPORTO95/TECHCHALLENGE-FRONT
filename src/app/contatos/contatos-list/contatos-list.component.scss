@@ -1,5 +1,5 @@
 .container {
-  background-color: white;
+  background-color: var(--color-black);
   margin: 10rem 5rem;
   padding: 3rem;
   border-radius: 5px;
@@ -7,7 +7,7 @@
   .filter {
     width: 100%;
     margin: 2rem 0;
-    border: 1px solid transparent;
+    border: 1px solid var(--color-default);
     padding: 15px;
     border-radius: 4px;
 
@@ -57,14 +57,14 @@
 
   td,
   th {
-    border: 1px solid #036564;
+    border: 1px solid var(--color-default);
     text-align: left;
     padding: 8px;
     font-size: 1.5rem;
   }
 
   tr th {
-    background-color: #036564;
+    background-color: var(--color-default);
     color: #ffffff;
     font-weight: 500;
   }

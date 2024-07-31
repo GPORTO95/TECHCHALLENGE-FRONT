@@ -10,17 +10,17 @@ header {
     position: fixed;
     top: 0;
 
-    background-color: #ffffff;
+    background-color: #1c2128;
     font-size: 2rem;
     color: #033649;
-    border-bottom: 2px solid #cdb380;
+    border-bottom: 2px solid var(--color-default);
 
     p {
         background: transparent;
     }
 
     .user {
-        border: 1px solid #033649;
+        border: 1px solid var(--color-default);
         padding: 5px;
         font-size: 1.6rem;
         border-radius: 100px;
