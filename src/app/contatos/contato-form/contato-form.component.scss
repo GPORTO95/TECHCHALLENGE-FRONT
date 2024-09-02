@@ -1,0 +1,17 @@
+form {
+    margin: 10rem 5rem;
+    padding: 3rem;
+
+    .row {
+
+        div {
+            display: grid;
+            gap: 10px;
+
+            label {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

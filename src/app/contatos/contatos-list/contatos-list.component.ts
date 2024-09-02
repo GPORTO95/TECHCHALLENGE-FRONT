@@ -4,11 +4,12 @@ import { Observable } from 'rxjs';
 import { ContatoList } from './contato-list';
 import { AsyncPipe } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contatos-list',
   standalone: true,
-  imports: [AsyncPipe, ReactiveFormsModule ],
+  imports: [AsyncPipe, ReactiveFormsModule],
   templateUrl: './contatos-list.component.html',
   styleUrl: './contatos-list.component.scss'
 })
@@ -25,7 +26,7 @@ export class ContatosListComponent {
     ddd: new FormControl('')
   });
 
-  constructor() {
+  constructor(private router: Router) {
     this.obterContatos();
   }
 
@@ -39,5 +40,9 @@ export class ContatosListComponent {
 
   limparFiltros() {
     this.form.reset();
+  }
+
+  onClickAdd() {
+    this.router.navigate(['/contatos/new']);
   }
 }

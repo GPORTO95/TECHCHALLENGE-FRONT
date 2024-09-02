@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+    <div class="row">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" placeholder="Digite o nome" formControlName="nome">
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn btn-secondary" type="button" (click)="onReset()">
+            Limpar
+        </button>
+        <button class="btn" type="button" (click)="onSubmit()">
+            Cadastrar
+        </button>
+    </div>
+</form>
